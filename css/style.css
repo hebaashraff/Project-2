@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{    
+    font-family: "PT Sans", sans-serif;
+    perspective: 600px;
+}
+.header{
+    width: 100%;
+    padding: 16px 0px;
+    background-color: #fff;
+    position: relative;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-content img{
+    width: 150px;
+    height: 30px;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list li{
+    list-style-type: none;
+}
+.list li a{
+    text-decoration: none;
+    color: #7b5244;
+    margin-left: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+}
+.table{
+    position: absolute;
+    z-index: 1;
+    width: 400px;
+    border: 1px solid #7b5244;
+    margin-top: 10px;
+    color: #7b5244;
+    background-color: #fff;
+    padding: 10px 20px 10px 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+.list1:hover .table{
+    visibility: visible;
+    opacity: 1;
+}
+.table table thead tr th{
+    font-weight: 500;
+    font-size: 16px;
+}
+.table table tbody tr td{
+    font-size: 15px;
+}
+.row{
+    padding: 2px 32px;
+}
+.list li ::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 4%;
+    top: 0;
+    bottom: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    transform: scale(1.2,1.2);
+}
+.list li ::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    transition-delay: 0.2s;
+    transform: scale(1.2,1.2);
+}
+.list li :hover::before,.list li :hover::after{
+    width: 100%;
+    visibility: visible;
+}
+.list li a::before{
+    position: absolute;
+    content: "";
+    width: 2%;
+    height: 0;
+    right: 0;
+    border-left: 1px solid #7b5244;
+    border-right: 1px solid #7b5244;
+    visibility: hidden;
+    transition: all 0.2s;
+    transform: scale(1.2,1.2);
+}
+.list li a::after{
+    position: absolute;
+    content: "";
+    width: 2%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #7b5244;
+    border-bottom: 1px solid #7b5244;
+    visibility: hidden;
+    transition: all 0.2s;
+    transform: scale(1.2,1.2);
+    transition-delay: 0.2s;
+}
+.list li a:hover::before,.list li a:hover::after{
+    height: 100%;
+    visibility: visible;
+}
+.icons ul{
+    display: flex;
+    list-style-type: none;
+}
+.icons ul li{
+    margin-left: 25px;
+}
+.icons ul i{
+    font-size: 25px;
+}
+.icons ul .span1{
+    padding: 3px 2px;
+    border-radius: 50%;
+    background-color: #7b5244;
+    color: #fff;
+    font-size: 12px;
+}
+.icons ul .span2{
+    font-size: 14px;
+    font-weight: 600;
+}
+.home{
+    height: 95vh;
+    background-color: #f5f5dc;
+    position: relative;
+}
+.home img{
+    position: absolute;
+    top: 100px;
+    right: 80px;
+}
+.home-content{
+    transform: translate(100px,200px);
+}
+.home-content h2{
+    color: #7b5244;
+    font-size: 52px;
+    width: 33%;
+}
+.home-content button{
+    padding: 11px 20px;
+    background-color:#a87e6f;
+    color: #fff;
+    border: 0;
+    margin-top: 35px;
+    border-radius: 5px;
+}
+.title h2{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 28px;
+}
+.line{
+    margin: auto;
+    width: 100px;
+    height: 2px;
+    background-color: #7b5244;
+    margin-top: 10px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.title:hover .line{
+    width: 140px;
+}
+.category-parent{
+    display: flex;
+    margin-top: 20px;
+}
+.category-items{
+    position: relative;
+    width: 24.25%;
+}
+.category-items:hover .category-info i{
+    visibility: visible;
+}
+.item1{
+    margin: 0px 1%;
+}
+.item2{
+    margin-right: 1%;
+}
+.category-items img{
+    width: 100%;
+}
+.category-info{
+    margin-top: 18px;
+}
+.category-items h4{
+    font-size: 14px;
+    color: gray;
+    font-weight: normal;
+}
+.category-items h2{
+    font-size: 17px;
+}
+.category-items i{
+    position: absolute;
+    visibility: hidden;
+    font-size: 24px;
+    background-color:#a87e6f; 
+    color: #fff;
+    padding: 3px 9px;
+    left: 230px;
+    bottom: 0.5px;
+}
+.discount-parent{
+    display: flex;
+    margin-top: 25px;
+}
+.discount-item1{
+    width: 50%;
+    height: 268px;
+    background-color: #f5f5dc;
+    padding: 21px;
+    position: relative;
+}
+.discount-item1 i{
+    color: #7b5244;
+    font-size: 40px;
+    float: left;
+}
+.discount-item1 .info{
+    display: inline-block;
+}
+.info h2{
+    font-size: 24px;
+}
+.discount-item1 p{
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: 15px;    
+}
+.bullets .line1{
+    right: 130px;
+}
+.bullets .line2{
+    right: 71px;
+}
+.bullets .line3{
+    right: 12px;
+}
+.bullets .line1,.bullets .line2,.bullets .line3{
+    position: absolute;
+    width: 46px;
+    height: 2px;
+    background-color: #7b5244;
+    bottom: 20px;
+}
+.discount-items1{
+    background-image: url(../images/image1.jpeg);
+}
+.discount-items2{
+    background-image: url(../images/image2.jpeg);
+}
+.discount-items1,.discount-items2{
+    height: 268px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    transition: 0.5s;
+}
+.discount-items1:hover,.discount-items2:hover{
+    transform: scale(1.1,1.1);
+}
+.items{
+    margin: 0px 1.8%;
+}
+.discount-item-info{
+    padding: 15px;
+}
+.discount-item-info h3{
+    font-size: 17px;
+    font-weight: normal;
+}
+.discount-item-info h2{
+    font-size: 18px;
+}
+.sprite-parent{
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 48px;
+}
+.sprite-item{
+    flex-grow: 1;
+    text-align: center;
+}
+.Item{
+    border-right: 1px solid #7b5244;
+}
+.sprite-icon{
+    background-image: url(../images/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+}
+.sprite-icon1{
+    background-position: center 5px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon1{
+    background-position: center -87px;
+}
+.sprite-icon2{
+    background-position: center -180px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon2{
+    background-position: center -273px;
+}
+.sprite-icon3{
+    background-position: center -364px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon3{
+    background-position: center -457px;
+}
+.sprite-icon4{
+    background-position: center -548px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon4{
+    background-position: center -640px;
+}
+.sprite-icon5{
+    background-position: center -733px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon5{
+    background-position: center -825px;
+}
+.sprite-info h3{
+    font-size: 16px;
+}
+.sprite-info span{
+    font-size: 14px;
+    color: gray;
+}
+.products-section{
+    padding-top: 35px;
+}
+.product-list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.product-list li{
+    padding: 32px 18px;
+    font-size: 15px;
+}
+.parent,.parent2{
+    display: flex;
+    justify-content: center;
+}
+.card-item{
+    flex-grow: 1;
+}
+.card-parent{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+.card-parent:hover{
+    transform: rotateY(180deg);
+}
+.front,.back{
+    position: absolute;
+}
+.front{
+    z-index: 1;
+    backface-visibility: hidden; 
+}
+.back{
+    transform: rotateY(180deg);
+    position: relative;
+}
+.card2{
+    margin: 0px 2%;
+}
+.front img,.back img{
+    width: 100%;
+    height: 400px;
+}
+.layout{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.layout i{
+    background-color: #7b5244;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.card-info{
+    margin-top: 12px;
+}
+.card-info i{
+    font-size: 13px;
+}
+.card-info .star{
+    color: yellow;
+}
+.card-info p{
+    font-size: 15.5px;
+    margin-top: 4px;
+}
+.card-info h3{
+    font-size: 18px;
+    margin-top: 1px;
+}
+.parent2{
+    margin: 30px 0px;
+}
+
+
+
